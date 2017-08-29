@@ -1,0 +1,22 @@
+body{
+background-color: red;
+font-size: 50px;
+}
+img{
+	display: block;
+	margin:auto;
+	padding: 90px;
+}
+
+.houses{
+	text-align: center;
+}
+.regions{
+	text-align: center;
+}
+.lords{
+	text-align: center;
+}
+.allegiances{
+	text-align: center;
+}
