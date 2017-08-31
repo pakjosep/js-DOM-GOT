@@ -12,64 +12,95 @@ Please also use CSS to style up your work
 
 
 var kingdoms = [
-{crest: "https://vignette4.wikia.nocookie.net/gameofthrones/images/1/15/House-Arryn-Main-Shield.PNG/revision/latest?cb=20170101094153", 
+{ crest: "https://vignette4.wikia.nocookie.net/gameofthrones/images/1/15/House-Arryn-Main-Shield.PNG/revision/latest?cb=20170101094153", 
 house: "House Arryn",
 region: "The Vale of Arryn",
 lord: "Robin Arryn", 
-allegiance: "House Stark"},
+allegiance: "House Stark", 
+words: "As High As Honor"},
 { crest: "https://vignette1.wikia.nocookie.net/gameofthrones/images/e/e6/House-Frey-Main-Shield.PNG/revision/latest?cb=20170523011255", 
 house: "House Frey",
 region: "The Riverlands",
 lord: "Unknown", 
-allegiance: "House Lanister"},
+allegiance: "House Lanister", 
+words: "We Stand Together"},
 { crest: "https://vignette3.wikia.nocookie.net/gameofthrones/images/8/86/House-Greyjoy-Main-Shield.PNG/revision/latest?cb=20170523015836", 
 house: "House Greyjoy",
 region: "Iron Islands",
 lord: "King Euron Greyjoy", 
-allegiance: "Sovereign"},
+allegiance: "Sovereign", 
+words: "We Do Not Sow"},
 { crest: "http://awoiaf.westeros.org/images/thumb/d/d5/House_Lannister.svg/250px-House_Lannister.svg.png", 
 house: "House Lannister",
 region: "The Crownlands",
 lord: "Queen Cersei", 
-allegiance: "House Targaryen"},
+allegiance: "House Targaryen", 
+words: "Hear Me Roar!"}, 
 { crest: "http://vignette4.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142", 
 house: "House Stark",
 region: "The North",
 lord: "King Jon Snow", 
-allegiance: "Sovereign"},
+allegiance: "Sovereign", 
+words: "Winter Is Coming"},
 { crest: "https://vignette2.wikia.nocookie.net/gameofthrones/images/4/43/House-Targaryen-Main-Shield.PNG/revision/latest?cb=20170510235320", 
 house: "House Targaryen",
 region: "Dragonstone",
 lord: "Queen Daenerys", 
-allegiance: "Sovereign"}
-];
-for(var i=0; i<kingdoms.length; i++){
-	
-var crestPic = document.createElement("img");
-crestPic.src= kingdoms[i].crest;
-main.appendChild(crestPic);
+allegiance: "Sovereign", 
+words: "Fire And Blood"}];
 
-var houseName = document.createElement("div");
-houseName.className= "houses";
-houseName.innerHTML= kingdoms[i].house;
-main.appendChild(houseName);
+var main = document.body;
 
-var regionName= document.createElement("div");
-regionName.className= "regions";
-regionName.innerHTML= kingdoms[i].region;
-main.appendChild(regionName);
+var mainDiv = document.createElement('div');
+mainDiv.className = "flip-container";
+main.appendChild(mainDiv);
 
-var lordName= document.createElement("div");
-lordName.className="lords";
-lordName.innerHTML= kingdoms[i].lord;
-main.appendChild(lordName);
+for (var i = 0; i < kingdoms.length; i++) {
+    var ChildDiv = document.createElement('div');
+    ChildDiv.className = "flipper" + i;
+    mainDiv.appendChild(ChildDiv);
 
-var allegianceName= document.createElement("div");
-allegianceName.className="allegiances";
-allegianceName.innerHTML=kingdoms[i].allegiance;
-main.appendChild(allegianceName);
+
+    var front = document.createElement("div");
+    front.className = "faceFront" + i;
+    ChildDiv.appendChild(front);
+
+var back = document.createElement("div");
+    back.className = "faceBack" + i;
+    ChildDiv.appendChild(back);
+
+    var houseBox = document.createElement('div');
+    houseBox.id = "house" + i;
+    houseBox.textContent = "Kingdom: " + kingdoms[i].house;
+    front.appendChild(houseBox);
+
+
+var sayingBox = document.createElement('div');
+    sayingBox.id = "saying" + i;
+    sayingBox.textContent = kingdoms[i].words;
+    front.appendChild(sayingBox);
+
+var crestBox = document.createElement('img');
+    crestBox.id = "crest" + i;
+    crestBox.className = "image";
+    crestBox.src = kingdoms[i].crest;
+    front.appendChild(crestBox);
+
+var regionBox = document.createElement('div');
+    regionBox.id = "region" + i;
+    regionBox.textContent = "Region: " + kingdoms[i].region;
+    front.appendChild(regionBox);
+    
+
+var lordBox = document.createElement('div');
+    lordBox.id = "lord" + i;
+    lordBox.textContent = "Lord: " + kingdoms[i].lord;
+    front.appendChild(lordBox);
+
+var allegianceBox = document.createElement('div');
+    allegianceBox.id = "allegiance" + i;
+    allegianceBox.textContent = "Allegiance: " + kingdoms[i].allegiance;
+    front.appendChild(allegianceBox);
 }
-
-
 
 

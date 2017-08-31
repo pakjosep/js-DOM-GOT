@@ -1,31 +1,249 @@
+html {
+    background: url("http://cdn.wallpapersafari.com/45/37/kYrbgW.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
-.container {
-	display:grid;
-	grid-template-columns: repeat(3, 1fr);
+html, body {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    margin: 40px;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+#crest {
+    width: 33%;
+    height: 33%;
+    object-fit: scale-down;
+    margin: auto;
+}
+
+.flip-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-}
-body{
-background-color: grey;
-font-size: 50px;
-} 
+    text-align: center;
+    color: white;
+    align-content: space-evenly;
+    grid-auto-flow: row;
+    position: relative;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    width: 615px margin:auto;
+    position: relative;
+  
 
-
-img{
-	display:grid;
-	margin:auto;
-	padding: 90px;
+    
 }
 
-.houses{
-	text-align: center;
+.flipper0 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 5px;
+    padding: 20px;
+    background: black;
+    margin: auto;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+    border: 5px solid #000000;
+    -webkit-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    
+    
 }
-.regions{
-	text-align: center;
+
+.flipper0:hover {
+	
+	color: transparent;
+    transform: rotateY( 180deg);
+    -webkit-transform: rotateY(180deg);
+
+    
 }
-.lords{
-	text-align: center;
+
+.flipper1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #061626;
+    margin: auto;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+    border: 5px solid #000000;
+    -webkit-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
-.allegiances{
-	text-align: center;
+
+.flipper1:hover {
+    transform: rotateY( 180deg);
+    -webkit-transform: rotateY(180deg);
+    color: transparent;
+}
+
+.flipper2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #161616;
+    margin: auto;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+    border: 5px solid #000000;
+    -webkit-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.flipper2:hover {
+    transform: rotateY( 180deg);
+    -webkit-transform: rotateY(180deg);
+    color: transparent;
+}
+
+.flipper3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #902314;
+    margin: auto;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+    border: 5px solid #000000;
+    -webkit-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+   
+}
+
+.flipper3:hover {
+    transform: rotateY( 180deg);
+    -webkit-transform: rotateY(180deg);
+    color: transparent;
+}
+
+.flipper4 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #2E2E2E;
+    margin: auto;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+    border: 5px solid #000000;
+    -webkit-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+}
+
+.flipper4:hover {
+    transform: rotateY( 180deg);
+    -webkit-transform: rotateY(180deg);
+    color: transparent;
+}
+
+.flipper5 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #221f34;
+    margin: auto;
+    border-radius: 14px 14px 14px 14px;
+    -moz-border-radius: 14px 14px 14px 14px;
+    -webkit-border-radius: 14px 14px 14px 14px;
+    border: 5px solid #000000;
+    -webkit-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.75);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.flipper5:hover {
+    transform: rotateY( 180deg);
+    -webkit-transform: rotateY(180deg);
+    color: transparent;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: visible;
+
+	position: absolute;
+	top: 0;
+	left: 0;
 }
